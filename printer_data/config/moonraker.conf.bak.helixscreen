@@ -153,16 +153,3 @@ project_name: cartographer3d-plugin
 is_system_service: False
 managed_services: klipper
 info_tags: desc=Cartographer Plugin
-
-[update_manager helixscreen]
-type: web
-channel: stable
-repo: prestonbrown/helixscreen
-path: /home/pi/helixscreen
-
-[update_manager update_klipper_and_mcus]
-type: git_repo
-primary_branch: main
-path: ~/ukam
-origin: https://github.com/fbeauKmi/update_klipper_and_mcus.git
-is_system_service: False
