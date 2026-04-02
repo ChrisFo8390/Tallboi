@@ -35,7 +35,35 @@
   },
   "log_path": "/tmp/helixscreen.log",
   "motion": {
-    "jog_mode": 1
+    "jog_mode": 2
+  },
+  "print_start_history": {
+    "entries": [
+      {
+        "phases": {
+          "3": 70
+        },
+        "temp_bucket": 150,
+        "timestamp": 1775141226,
+        "total": 70
+      },
+      {
+        "phases": {
+          "3": 50
+        },
+        "temp_bucket": 150,
+        "timestamp": 1775142271,
+        "total": 50
+      },
+      {
+        "phases": {
+          "3": 40
+        },
+        "temp_bucket": 150,
+        "timestamp": 1775157787,
+        "total": 40
+      }
+    ]
   },
   "printer": {
     "leds": {
@@ -143,7 +171,7 @@
             "tmc2240 stepper_z3",
             "temperature_fan Raspberry"
           ],
-          "timestamp": "2026-04-01T19:53:07Z"
+          "timestamp": "2026-04-02T19:39:17Z"
         },
         "optional": []
       },
@@ -185,35 +213,35 @@
               "id": "main",
               "widgets": [
                 {
-                  "col": 0,
-                  "colspan": 2,
-                  "enabled": true,
-                  "id": "printer_image",
-                  "row": 0,
-                  "rowspan": 2
-                },
-                {
-                  "col": 0,
+                  "col": 4,
                   "colspan": 2,
                   "enabled": false,
-                  "id": "print_status",
-                  "row": 2,
+                  "id": "printer_image",
+                  "row": 0,
                   "rowspan": 2
                 },
                 {
                   "col": 2,
                   "colspan": 4,
                   "enabled": true,
-                  "id": "tips",
+                  "id": "print_status",
                   "row": 0,
                   "rowspan": 2
                 },
                 {
                   "col": 2,
+                  "colspan": 4,
+                  "enabled": false,
+                  "id": "tips",
+                  "row": 0,
+                  "rowspan": 2
+                },
+                {
+                  "col": 5,
                   "colspan": 1,
                   "enabled": true,
                   "id": "shutdown",
-                  "row": 2,
+                  "row": 3,
                   "rowspan": 1
                 },
                 {
@@ -257,15 +285,15 @@
                   "colspan": 1,
                   "enabled": true,
                   "id": "ams",
-                  "row": 2,
+                  "row": 3,
                   "rowspan": 1
                 },
                 {
-                  "col": -1,
-                  "colspan": 1,
+                  "col": 0,
+                  "colspan": 2,
                   "enabled": false,
                   "id": "tool_switcher",
-                  "row": -1,
+                  "row": 3,
                   "rowspan": 1
                 },
                 {
@@ -287,17 +315,17 @@
                 {
                   "col": 2,
                   "colspan": 1,
-                  "enabled": true,
+                  "enabled": false,
                   "id": "temperature",
                   "row": 3,
                   "rowspan": 1
                 },
                 {
-                  "col": -1,
-                  "colspan": 1,
-                  "enabled": false,
+                  "col": 0,
+                  "colspan": 2,
+                  "enabled": true,
                   "id": "nozzle_temps",
-                  "row": -1,
+                  "row": 0,
                   "rowspan": 2
                 },
                 {
@@ -397,11 +425,11 @@
                   "rowspan": 1
                 },
                 {
-                  "col": -1,
+                  "col": 3,
                   "colspan": 1,
-                  "enabled": false,
+                  "enabled": true,
                   "id": "macros",
-                  "row": -1,
+                  "row": 3,
                   "rowspan": 1
                 },
                 {
@@ -415,8 +443,47 @@
                 {
                   "col": 5,
                   "colspan": 1,
-                  "enabled": true,
+                  "enabled": false,
                   "id": "notifications",
+                  "row": 3,
+                  "rowspan": 1
+                },
+                {
+                  "col": 2,
+                  "colspan": 1,
+                  "config": {
+                    "color": 15277667,
+                    "icon": "flash",
+                    "macro": "QUAD_GANTRY_LEVEL"
+                  },
+                  "enabled": true,
+                  "id": "favorite_macro:1",
+                  "row": 3,
+                  "rowspan": 1
+                },
+                {
+                  "col": 0,
+                  "colspan": 1,
+                  "config": {
+                    "color": 15022389,
+                    "icon": "filament",
+                    "macro": "T0"
+                  },
+                  "enabled": true,
+                  "id": "favorite_macro:2",
+                  "row": 3,
+                  "rowspan": 1
+                },
+                {
+                  "col": 1,
+                  "colspan": 1,
+                  "config": {
+                    "color": 9159498,
+                    "icon": "refresh",
+                    "macro": "NO_TOOL"
+                  },
+                  "enabled": true,
+                  "id": "favorite_macro:3",
                   "row": 3,
                   "rowspan": 1
                 }
