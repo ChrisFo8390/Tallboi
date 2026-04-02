@@ -1,6 +1,6 @@
 {
   "active_printer_id": "default",
-  "config_version": 9,
+  "config_version": 10,
   "dark_mode": true,
   "display": {
     "bed_mesh_render_mode": 0,
@@ -143,7 +143,7 @@
             "tmc2240 stepper_z3",
             "temperature_fan Raspberry"
           ],
-          "timestamp": "2026-03-31T14:53:10Z"
+          "timestamp": "2026-04-01T19:53:07Z"
         },
         "optional": []
       },
@@ -227,8 +227,12 @@
                 {
                   "col": -1,
                   "colspan": 1,
+                  "config": {
+                    "device": "__all__",
+                    "icon": "power_cycle"
+                  },
                   "enabled": false,
-                  "id": "power",
+                  "id": "power_device:1",
                   "row": -1,
                   "rowspan": 1
                 },
