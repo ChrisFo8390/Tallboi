@@ -1,5 +1,8 @@
 {
   "active_printer_id": "default",
+  "appearance": {
+    "toolhead_style": 2
+  },
   "config_version": 10,
   "dark_mode": true,
   "display": {
@@ -171,7 +174,7 @@
             "tmc2240 stepper_z3",
             "temperature_fan Raspberry"
           ],
-          "timestamp": "2026-04-04T22:03:47Z"
+          "timestamp": "2026-04-04T22:39:15Z"
         },
         "optional": []
       },
