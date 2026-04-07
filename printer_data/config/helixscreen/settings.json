@@ -189,7 +189,7 @@
             "tmc2240 stepper_z3",
             "temperature_fan Raspberry"
           ],
-          "timestamp": "2026-04-06T19:57:07Z"
+          "timestamp": "2026-04-07T11:16:51Z"
         },
         "optional": []
       },
@@ -509,6 +509,9 @@
             }
           ]
         }
+      },
+      "probe_sensors": {
+        "sensors": null
       },
       "temp_sensors": {
         "bed": "heater_bed",
