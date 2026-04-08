@@ -69,6 +69,22 @@
         "temp_bucket": 150,
         "timestamp": 1775497055,
         "total": 44
+      },
+      {
+        "phases": {
+          "4": 295
+        },
+        "temp_bucket": 225,
+        "timestamp": 1775582616,
+        "total": 295
+      },
+      {
+        "phases": {
+          "4": 295
+        },
+        "temp_bucket": 225,
+        "timestamp": 1775595396,
+        "total": 295
       }
     ]
   },
@@ -189,7 +205,7 @@
             "tmc2240 stepper_z3",
             "temperature_fan Raspberry"
           ],
-          "timestamp": "2026-04-07T11:16:51Z"
+          "timestamp": "2026-04-07T22:57:25Z"
         },
         "optional": []
       },
@@ -504,6 +520,54 @@
                   "id": "favorite_macro:3",
                   "row": 3,
                   "rowspan": 1
+                },
+                {
+                  "col": -1,
+                  "colspan": 1,
+                  "enabled": false,
+                  "id": "power_device",
+                  "row": -1,
+                  "rowspan": 1
+                },
+                {
+                  "col": 5,
+                  "colspan": 1,
+                  "enabled": true,
+                  "id": "fan_stack",
+                  "row": 2,
+                  "rowspan": 1
+                },
+                {
+                  "col": -1,
+                  "colspan": 1,
+                  "enabled": false,
+                  "id": "fan",
+                  "row": -1,
+                  "rowspan": 1
+                },
+                {
+                  "col": -1,
+                  "colspan": 1,
+                  "enabled": false,
+                  "id": "thermistor",
+                  "row": -1,
+                  "rowspan": 1
+                },
+                {
+                  "col": -1,
+                  "colspan": 2,
+                  "enabled": false,
+                  "id": "temp_graph",
+                  "row": -1,
+                  "rowspan": 2
+                },
+                {
+                  "col": -1,
+                  "colspan": 1,
+                  "enabled": false,
+                  "id": "favorite_macro",
+                  "row": -1,
+                  "rowspan": 1
                 }
               ]
             }
@@ -535,6 +599,9 @@
         "rows": 4
       }
     }
+  },
+  "update": {
+    "dismissed_version": "0.99.24"
   },
   "wizard_completed": true
 }
