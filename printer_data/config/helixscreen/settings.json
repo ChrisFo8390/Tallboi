@@ -3,7 +3,7 @@
   "appearance": {
     "toolhead_style": 2
   },
-  "config_version": 10,
+  "config_version": 11,
   "dark_mode": true,
   "display": {
     "bed_mesh_render_mode": 0,
@@ -45,16 +45,13 @@
   "print_start_history": {
     "entries": [
       {
-        "phases": {
-          "3": 59
-        },
+        "phases": {},
         "temp_bucket": 150,
         "timestamp": 1775481945,
         "total": 59
       },
       {
         "phases": {
-          "4": 13,
           "7": 31
         },
         "temp_bucket": 150,
@@ -63,7 +60,6 @@
       },
       {
         "phases": {
-          "4": 41,
           "7": 3
         },
         "temp_bucket": 150,
@@ -71,26 +67,19 @@
         "total": 44
       },
       {
-        "phases": {
-          "4": 295
-        },
+        "phases": {},
         "temp_bucket": 225,
         "timestamp": 1775757237,
         "total": 295
       },
       {
-        "phases": {
-          "4": 297
-        },
+        "phases": {},
         "temp_bucket": 225,
         "timestamp": 1775767221,
         "total": 297
       },
       {
-        "phases": {
-          "3": 96,
-          "4": 203
-        },
+        "phases": {},
         "temp_bucket": 225,
         "timestamp": 1775767654,
         "total": 299
@@ -214,7 +203,7 @@
             "tmc2240 stepper_z3",
             "temperature_fan Raspberry"
           ],
-          "timestamp": "2026-04-09T19:56:39Z"
+          "timestamp": "2026-04-10T16:53:36Z"
         },
         "optional": []
       },
