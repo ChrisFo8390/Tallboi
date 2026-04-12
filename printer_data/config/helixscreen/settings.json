@@ -83,6 +83,14 @@
         "temp_bucket": 225,
         "timestamp": 1775767654,
         "total": 299
+      },
+      {
+        "phases": {
+          "7": 50
+        },
+        "temp_bucket": 2,
+        "timestamp": 1775914656,
+        "total": 318
       }
     ]
   },
@@ -203,7 +211,7 @@
             "tmc2240 stepper_z3",
             "temperature_fan Raspberry"
           ],
-          "timestamp": "2026-04-10T16:53:36Z"
+          "timestamp": "2026-04-11T13:04:50Z"
         },
         "optional": []
       },
@@ -590,6 +598,13 @@
   },
   "theme": {
     "preset": 0
+  },
+  "thermal": {
+    "rates": {
+      "extruder": {
+        "heat_rate": 0.2893044054508209
+      }
+    }
   },
   "ui": {
     "cached_grid": {
