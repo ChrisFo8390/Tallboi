@@ -211,7 +211,7 @@
             "tmc2240 stepper_z3",
             "temperature_fan Raspberry"
           ],
-          "timestamp": "2026-04-12T17:15:38Z"
+          "timestamp": "2026-04-16T16:34:52Z"
         },
         "optional": []
       },
@@ -574,6 +574,26 @@
                   "enabled": false,
                   "id": "favorite_macro",
                   "row": -1,
+                  "rowspan": 1
+                },
+                {
+                  "col": -1,
+                  "colspan": 1,
+                  "enabled": false,
+                  "id": "motion",
+                  "row": -1,
+                  "rowspan": 1
+                },
+                {
+                  "col": 3,
+                  "colspan": 1,
+                  "config": {
+                    "color": 9159498,
+                    "macro": "UNLOAD_ONE_FILAMENT"
+                  },
+                  "enabled": true,
+                  "id": "favorite_macro:4",
+                  "row": 3,
                   "rowspan": 1
                 }
               ]
