@@ -3,7 +3,7 @@
   "appearance": {
     "toolhead_style": 2
   },
-  "config_version": 11,
+  "config_version": 12,
   "dark_mode": true,
   "display": {
     "bed_mesh_render_mode": 0,
@@ -163,7 +163,7 @@
             "heater_fan T4_hotend_fan",
             "fan_generic T4_partfan",
             "controller_fan Electronics",
-            "temperature_fan Raspberry",
+            "temperature_fan _Raspberry",
             "controller_fan Stepper"
           ],
           "filament_sensors": [],
@@ -209,9 +209,9 @@
             "tmc2240 stepper_z1",
             "tmc2240 stepper_z2",
             "tmc2240 stepper_z3",
-            "temperature_fan Raspberry"
+            "temperature_fan _Raspberry"
           ],
-          "timestamp": "2026-04-17T18:24:51Z"
+          "timestamp": "2026-04-18T23:04:20Z"
         },
         "optional": []
       },
@@ -626,6 +626,10 @@
         "heat_rate": 0.2893044054508209
       }
     }
+  },
+  "tour": {
+    "completed": true,
+    "last_seen_version": 1
   },
   "ui": {
     "cached_grid": {
