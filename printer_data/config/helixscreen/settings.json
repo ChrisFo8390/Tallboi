@@ -3,7 +3,7 @@
   "appearance": {
     "toolhead_style": 2
   },
-  "config_version": 12,
+  "config_version": 13,
   "dark_mode": true,
   "display": {
     "bed_mesh_render_mode": 0,
@@ -211,7 +211,7 @@
             "tmc2240 stepper_z3",
             "temperature_fan _Raspberry"
           ],
-          "timestamp": "2026-04-18T23:04:20Z"
+          "timestamp": "2026-04-19T13:05:47Z"
         },
         "optional": []
       },
