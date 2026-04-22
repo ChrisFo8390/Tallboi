@@ -211,7 +211,7 @@
             "tmc2240 stepper_z3",
             "temperature_fan _Raspberry"
           ],
-          "timestamp": "2026-04-19T13:05:47Z"
+          "timestamp": "2026-04-21T21:13:41Z"
         },
         "optional": []
       },
@@ -601,6 +601,7 @@
           ]
         }
       },
+      "printer_name": "Voron 2.4 Tallboi",
       "probe_sensors": {
         "sensors": null
       },
