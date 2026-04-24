@@ -3,7 +3,7 @@
   "appearance": {
     "toolhead_style": 2
   },
-  "config_version": 13,
+  "config_version": 14,
   "dark_mode": true,
   "display": {
     "bed_mesh_render_mode": 0,
@@ -162,11 +162,22 @@
             "fan_generic T3_partfan",
             "heater_fan T4_hotend_fan",
             "fan_generic T4_partfan",
-            "controller_fan Electronics",
+            "controller_fan _Electronics",
             "temperature_fan _Raspberry",
-            "controller_fan Stepper"
+            "controller_fan _Stepper"
           ],
-          "filament_sensors": [],
+          "filament_sensors": [
+            "filament_motion_sensor T0_Clog",
+            "filament_switch_sensor Filament_T0",
+            "filament_motion_sensor T1_Clog",
+            "filament_switch_sensor Filament_T1",
+            "filament_motion_sensor T2_Clog",
+            "filament_switch_sensor Filament_T2",
+            "filament_motion_sensor T3_Clog",
+            "filament_switch_sensor Filament_T3",
+            "filament_motion_sensor T4_Clog",
+            "filament_switch_sensor Filament_T4"
+          ],
           "heaters": [
             "heater_bed",
             "extruder",
@@ -176,22 +187,22 @@
             "extruder4"
           ],
           "leds": [
-            "neopixel Chamber",
-            "neopixel logo_led0",
-            "neopixel logo_led1",
-            "neopixel logo_led2",
-            "neopixel logo_led3",
-            "neopixel logo_led4",
-            "neopixel neb_led0",
-            "neopixel neb_led1",
-            "neopixel neb_led2",
-            "neopixel neb_led3",
-            "neopixel neb_led4"
+            "neopixel _Chamber",
+            "neopixel _logo_led0",
+            "neopixel _logo_led1",
+            "neopixel _logo_led2",
+            "neopixel _logo_led3",
+            "neopixel _logo_led4",
+            "neopixel _neb_led0",
+            "neopixel _neb_led1",
+            "neopixel _neb_led2",
+            "neopixel _neb_led3",
+            "neopixel _neb_led4"
           ],
           "sensors": [
             "temperature_sensor MCU",
             "temperature_sensor Hexa",
-            "temperature_sensor PI",
+            "temperature_sensor Host",
             "temperature_sensor EBB0",
             "temperature_sensor EBB1",
             "temperature_sensor EBB2",
@@ -211,7 +222,7 @@
             "tmc2240 stepper_z3",
             "temperature_fan _Raspberry"
           ],
-          "timestamp": "2026-04-22T12:30:52Z"
+          "timestamp": "2026-04-23T22:23:45Z"
         },
         "optional": []
       },
@@ -232,12 +243,22 @@
         ],
         "last_brightness": 100,
         "last_color": "#FFFFFF",
-        "last_white": null,
+        "last_white": 0.0,
         "led_on_at_start": false,
         "macro_devices": [],
         "selected": [],
         "selected_strips": [
-          "neopixel Chamber"
+          "neopixel _Chamber",
+          "neopixel _logo_led0",
+          "neopixel _logo_led1",
+          "neopixel _logo_led2",
+          "neopixel _logo_led3",
+          "neopixel _logo_led4",
+          "neopixel _neb_led0",
+          "neopixel _neb_led1",
+          "neopixel _neb_led2",
+          "neopixel _neb_led3",
+          "neopixel _neb_led4"
         ],
         "startup_brightness": 80,
         "strip": "neopixel Chamber"
@@ -618,6 +639,7 @@
   "safety": {
     "estop_require_confirmation": false
   },
+  "telemetry_enabled": false,
   "theme": {
     "preset": 0
   },
