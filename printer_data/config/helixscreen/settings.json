@@ -163,6 +163,8 @@
             "heater_fan T4_hotend_fan",
             "fan_generic T4_partfan",
             "controller_fan _Electronics",
+            "controller_fan _Electronics2",
+            "controller_fan _Electronics3",
             "temperature_fan _Raspberry",
             "controller_fan _Stepper"
           ],
@@ -222,7 +224,7 @@
             "tmc2240 stepper_z3",
             "temperature_fan _Raspberry"
           ],
-          "timestamp": "2026-04-24T11:01:16Z"
+          "timestamp": "2026-04-24T15:21:32Z"
         },
         "optional": []
       },
@@ -345,7 +347,7 @@
                 {
                   "col": 4,
                   "colspan": 1,
-                  "enabled": true,
+                  "enabled": false,
                   "id": "ams",
                   "row": 3,
                   "rowspan": 1
@@ -560,7 +562,7 @@
                 {
                   "col": 5,
                   "colspan": 1,
-                  "enabled": true,
+                  "enabled": false,
                   "id": "fan_stack",
                   "row": 2,
                   "rowspan": 1
