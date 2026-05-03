@@ -3,7 +3,7 @@
   "appearance": {
     "toolhead_style": 2
   },
-  "config_version": 14,
+  "config_version": 16,
   "dark_mode": true,
   "display": {
     "bed_mesh_render_mode": 0,
@@ -222,7 +222,7 @@
             "tmc2240 stepper_z2",
             "tmc2240 stepper_z3"
           ],
-          "timestamp": "2026-04-25T17:15:44Z"
+          "timestamp": "2026-05-01T10:25:11Z"
         },
         "optional": []
       },
