@@ -3,7 +3,7 @@
   "appearance": {
     "toolhead_style": 2
   },
-  "config_version": 17,
+  "config_version": 18,
   "dark_mode": true,
   "display": {
     "bed_mesh_render_mode": 0,
@@ -27,6 +27,7 @@
       "d": 0.0,
       "e": 1.0,
       "f": 0.0,
+      "recheck_pending": false,
       "valid": false
     },
     "jitter_threshold": 5,
@@ -36,6 +37,9 @@
   },
   "language": "de",
   "led": {
+    "auto_state": {
+      "enabled": null
+    },
     "selected_strips": null
   },
   "log_path": "/tmp/helixscreen.log",
@@ -222,7 +226,7 @@
             "tmc2240 stepper_z2",
             "tmc2240 stepper_z3"
           ],
-          "timestamp": "2026-06-01T18:41:44Z"
+          "timestamp": "2026-06-24T19:39:47Z"
         },
         "optional": []
       },
@@ -231,6 +235,9 @@
         "hotend": "extruder"
       },
       "leds": {
+        "auto_state": {
+          "mappings": null
+        },
         "color_presets": [
           "#FFFFFF",
           "#FFD700",
