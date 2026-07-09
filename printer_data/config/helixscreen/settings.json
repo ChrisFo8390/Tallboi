@@ -3,7 +3,7 @@
   "appearance": {
     "toolhead_style": 2
   },
-  "config_version": 18,
+  "config_version": 19,
   "dark_mode": true,
   "display": {
     "bed_mesh_render_mode": 0,
@@ -11,6 +11,7 @@
     "dim_sec": 600,
     "drm_device": "",
     "gcode_render_mode": 3,
+    "gpu_3d_blocked": false,
     "screensaver_type": 2,
     "sleep_sec": 1800,
     "sleep_while_printing": false
@@ -226,7 +227,7 @@
             "tmc2240 stepper_z2",
             "tmc2240 stepper_z3"
           ],
-          "timestamp": "2026-07-07T19:12:56Z"
+          "timestamp": "2026-07-09T17:13:02Z"
         },
         "optional": []
       },
