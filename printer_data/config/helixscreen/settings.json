@@ -14,7 +14,8 @@
     "gpu_3d_blocked": false,
     "screensaver_type": 2,
     "sleep_sec": 1800,
-    "sleep_while_printing": false
+    "sleep_while_printing": false,
+    "time_format": 1
   },
   "gcode_viewer": {
     "shading_model": "phong",
@@ -227,7 +228,7 @@
             "tmc2240 stepper_z2",
             "tmc2240 stepper_z3"
           ],
-          "timestamp": "2026-07-09T17:14:37Z"
+          "timestamp": "2026-07-09T20:11:18Z"
         },
         "optional": []
       },
@@ -647,6 +648,7 @@
   "safety": {
     "estop_require_confirmation": false
   },
+  "sounds_enabled": false,
   "telemetry_enabled": false,
   "theme": {
     "preset": 0
@@ -672,5 +674,6 @@
   "update": {
     "dismissed_version": "0.99.24"
   },
+  "wifi_expected": true,
   "wizard_completed": true
 }
