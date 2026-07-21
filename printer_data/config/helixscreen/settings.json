@@ -12,6 +12,7 @@
     "drm_device": "",
     "gcode_render_mode": 3,
     "gpu_3d_blocked": false,
+    "gpu_blur_blocked": false,
     "screensaver_type": 2,
     "sleep_sec": 1800,
     "sleep_while_printing": false,
@@ -228,7 +229,7 @@
             "tmc2240 stepper_z2",
             "tmc2240 stepper_z3"
           ],
-          "timestamp": "2026-07-09T21:13:27Z"
+          "timestamp": "2026-07-21T17:27:51Z"
         },
         "optional": []
       },
