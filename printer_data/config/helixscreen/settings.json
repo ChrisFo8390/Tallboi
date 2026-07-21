@@ -229,9 +229,13 @@
             "tmc2240 stepper_z2",
             "tmc2240 stepper_z3"
           ],
-          "timestamp": "2026-07-21T17:53:31Z"
+          "timestamp": "2026-07-21T18:30:31Z"
         },
-        "optional": []
+        "optional": [
+          "neopixel Chamber",
+          "controller_fan _Electronics",
+          "controller_fan _Electronics2"
+        ]
       },
       "heaters": {
         "bed": "heater_bed",
