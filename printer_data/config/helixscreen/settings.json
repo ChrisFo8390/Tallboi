@@ -1,9 +1,6 @@
 {
   "active_printer_id": "default",
-  "appearance": {
-    "toolhead_style": 2
-  },
-  "config_version": 19,
+  "config_version": 21,
   "dark_mode": true,
   "display": {
     "bed_mesh_render_mode": 0,
@@ -39,12 +36,6 @@
     "touch_device": ""
   },
   "language": "de",
-  "led": {
-    "auto_state": {
-      "enabled": null
-    },
-    "selected_strips": null
-  },
   "log_path": "/tmp/helixscreen.log",
   "motion": {
     "jog_mode": 2
@@ -101,13 +92,11 @@
       }
     ]
   },
-  "printer": {
-    "leds": {
-      "startup_brightness": null
-    }
-  },
   "printers": {
     "default": {
+      "appearance": {
+        "toolhead_style": 2
+      },
       "default_macros": {
         "cooldown": "SET_HEATER_TEMPERATURE HEATER=extruder TARGET=0\nSET_HEATER_TEMPERATURE HEATER=heater_bed TARGET=0",
         "load_filament": {
@@ -134,9 +123,7 @@
         "hotend": "heater_fan T0_hotend_fan",
         "part": "fan_generic T0_partfan"
       },
-      "filament_sensors": {
-        "sensors": null
-      },
+      "filament_sensors": {},
       "hardware": {
         "expected": [
           "heater_bed",
@@ -229,7 +216,7 @@
             "tmc2240 stepper_z2",
             "tmc2240 stepper_z3"
           ],
-          "timestamp": "2026-07-21T18:45:33Z"
+          "timestamp": "2026-08-03T20:43:53Z"
         },
         "optional": [
           "neopixel Chamber",
@@ -242,9 +229,7 @@
         "hotend": "extruder"
       },
       "leds": {
-        "auto_state": {
-          "mappings": null
-        },
+        "auto_state": {},
         "color_presets": [
           "#FFFFFF",
           "#FFD700",
@@ -637,9 +622,7 @@
         }
       },
       "printer_name": "Voron 2.4 Tallboi",
-      "probe_sensors": {
-        "sensors": null
-      },
+      "probe_sensors": {},
       "temp_sensors": {
         "bed": "heater_bed",
         "hotend": "extruder"
