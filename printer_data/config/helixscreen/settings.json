@@ -197,6 +197,7 @@
           "sensors": [
             "temperature_sensor MCU",
             "temperature_sensor Hexa",
+            "temperature_sensor Fly",
             "temperature_sensor Host",
             "temperature_sensor EBB0",
             "temperature_sensor EBB1",
@@ -216,7 +217,7 @@
             "tmc2240 stepper_z2",
             "tmc2240 stepper_z3"
           ],
-          "timestamp": "2026-08-07T18:29:35Z"
+          "timestamp": "2026-08-20T21:59:07Z"
         },
         "optional": [
           "neopixel Chamber",
