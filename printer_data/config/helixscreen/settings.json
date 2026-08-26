@@ -1,6 +1,6 @@
 {
   "active_printer_id": "default",
-  "config_version": 21,
+  "config_version": 22,
   "dark_mode": true,
   "display": {
     "bed_mesh_render_mode": 0,
@@ -217,7 +217,7 @@
             "tmc2240 stepper_z2",
             "tmc2240 stepper_z3"
           ],
-          "timestamp": "2026-08-24T18:44:05Z"
+          "timestamp": "2026-08-25T16:15:03Z"
         },
         "optional": [
           "neopixel Chamber",
