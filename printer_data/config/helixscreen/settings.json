@@ -161,18 +161,7 @@
             "controller_fan _Electronics3",
             "controller_fan _Stepper"
           ],
-          "filament_sensors": [
-            "filament_motion_sensor T0_Clog",
-            "filament_switch_sensor Filament_T0",
-            "filament_motion_sensor T1_Clog",
-            "filament_switch_sensor Filament_T1",
-            "filament_motion_sensor T2_Clog",
-            "filament_switch_sensor Filament_T2",
-            "filament_motion_sensor T3_Clog",
-            "filament_switch_sensor Filament_T3",
-            "filament_motion_sensor T4_Clog",
-            "filament_switch_sensor Filament_T4"
-          ],
+          "filament_sensors": [],
           "heaters": [
             "heater_bed",
             "extruder",
@@ -217,7 +206,7 @@
             "tmc2240 stepper_z2",
             "tmc2240 stepper_z3"
           ],
-          "timestamp": "2026-08-27T19:30:55Z"
+          "timestamp": "2026-08-30T12:50:47Z"
         },
         "optional": [
           "neopixel Chamber",
