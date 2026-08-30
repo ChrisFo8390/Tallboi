@@ -161,7 +161,35 @@
             "controller_fan _Electronics3",
             "controller_fan _Stepper"
           ],
-          "filament_sensors": [],
+          "filament_sensors": [
+            "filament_switch_sensor extruder_tool_start",
+            "filament_switch_sensor extruder1_tool_start",
+            "filament_switch_sensor extruder2_tool_start",
+            "filament_switch_sensor extruder3_tool_start",
+            "filament_switch_sensor extruder4_tool_start",
+            "filament_switch_sensor lane0_prep",
+            "filament_switch_sensor lane0_load",
+            "filament_switch_sensor EMU_buf0_expanded",
+            "filament_switch_sensor EMU_buf0_compressed",
+            "filament_switch_sensor lane1_prep",
+            "filament_switch_sensor lane1_load",
+            "filament_switch_sensor EMU_buf1_expanded",
+            "filament_switch_sensor EMU_buf1_compressed",
+            "filament_switch_sensor lane2_prep",
+            "filament_switch_sensor lane2_load",
+            "filament_switch_sensor EMU_buf2_expanded",
+            "filament_switch_sensor EMU_buf2_compressed",
+            "filament_switch_sensor lane3_prep",
+            "filament_switch_sensor lane3_load",
+            "filament_switch_sensor EMU_buf3_expanded",
+            "filament_switch_sensor EMU_buf3_compressed",
+            "filament_switch_sensor lane4_prep",
+            "filament_switch_sensor lane4_load",
+            "filament_switch_sensor EMU_buf4_expanded",
+            "filament_switch_sensor EMU_buf4_compressed",
+            "filament_switch_sensor virtual_bypass",
+            "filament_switch_sensor quiet_mode"
+          ],
           "heaters": [
             "heater_bed",
             "extruder",
@@ -206,7 +234,7 @@
             "tmc2240 stepper_z2",
             "tmc2240 stepper_z3"
           ],
-          "timestamp": "2026-08-30T12:53:01Z"
+          "timestamp": "2026-08-30T19:17:19Z"
         },
         "optional": [
           "neopixel Chamber",
@@ -258,7 +286,7 @@
       "panel_widgets": {
         "home": {
           "main_page_index": 0,
-          "next_page_id": 1,
+          "next_page_id": 2,
           "pages": [
             {
               "id": "main",
@@ -603,6 +631,97 @@
                   },
                   "enabled": true,
                   "id": "favorite_macro:4",
+                  "row": 3,
+                  "rowspan": 1
+                }
+              ]
+            },
+            {
+              "id": "page_1",
+              "widgets": [
+                {
+                  "col": 0,
+                  "colspan": 6,
+                  "enabled": true,
+                  "id": "ams",
+                  "row": 0,
+                  "rowspan": 2
+                },
+                {
+                  "col": 0,
+                  "colspan": 1,
+                  "config": {
+                    "color": 15158332,
+                    "icon": "filament",
+                    "macro": "TEST_PFS_LANE0"
+                  },
+                  "enabled": true,
+                  "id": "favorite_macro:5",
+                  "row": 2,
+                  "rowspan": 1
+                },
+                {
+                  "col": 1,
+                  "colspan": 1,
+                  "config": {
+                    "color": 3447003,
+                    "icon": "filament",
+                    "macro": "TEST_PFS_LANE1"
+                  },
+                  "enabled": true,
+                  "id": "favorite_macro:6",
+                  "row": 2,
+                  "rowspan": 1
+                },
+                {
+                  "col": 2,
+                  "colspan": 1,
+                  "config": {
+                    "color": 3066993,
+                    "icon": "filament",
+                    "macro": "TEST_PFS_LANE2"
+                  },
+                  "enabled": true,
+                  "id": "favorite_macro:7",
+                  "row": 2,
+                  "rowspan": 1
+                },
+                {
+                  "col": 3,
+                  "colspan": 1,
+                  "config": {
+                    "color": 15844367,
+                    "icon": "filament",
+                    "macro": "TEST_PFS_LANE3"
+                  },
+                  "enabled": true,
+                  "id": "favorite_macro:8",
+                  "row": 2,
+                  "rowspan": 1
+                },
+                {
+                  "col": 4,
+                  "colspan": 1,
+                  "config": {
+                    "color": 10181046,
+                    "icon": "filament",
+                    "macro": "TEST_PFS_LANE4"
+                  },
+                  "enabled": true,
+                  "id": "favorite_macro:9",
+                  "row": 2,
+                  "rowspan": 1
+                },
+                {
+                  "col": 0,
+                  "colspan": 2,
+                  "config": {
+                    "color": 9807270,
+                    "icon": "refresh",
+                    "macro": "TEST_PFS_ALL"
+                  },
+                  "enabled": true,
+                  "id": "favorite_macro:10",
                   "row": 3,
                   "rowspan": 1
                 }
