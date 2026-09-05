@@ -229,7 +229,7 @@
             "tmc2240 stepper_z2",
             "tmc2240 stepper_z3"
           ],
-          "timestamp": "2026-09-04T19:23:53Z"
+          "timestamp": "2026-09-05T16:39:46Z"
         },
         "optional": [
           "neopixel Chamber",
@@ -364,10 +364,10 @@
                 },
                 {
                   "col": 0,
-                  "colspan": 2,
+                  "colspan": 1,
                   "enabled": false,
                   "id": "tool_switcher",
-                  "row": 3,
+                  "row": 2,
                   "rowspan": 1
                 },
                 {
@@ -499,11 +499,11 @@
                   "rowspan": 1
                 },
                 {
-                  "col": 3,
+                  "col": 0,
                   "colspan": 1,
                   "enabled": false,
                   "id": "macros",
-                  "row": 3,
+                  "row": 2,
                   "rowspan": 1
                 },
                 {
@@ -627,6 +627,108 @@
                   "enabled": true,
                   "id": "favorite_macro:4",
                   "row": 3,
+                  "rowspan": 1
+                },
+                {
+                  "col": -1,
+                  "colspan": 1,
+                  "enabled": false,
+                  "id": "chamber_temperature",
+                  "row": -1,
+                  "rowspan": 1
+                },
+                {
+                  "col": -1,
+                  "colspan": 1,
+                  "enabled": false,
+                  "id": "bypass",
+                  "row": -1,
+                  "rowspan": 1
+                },
+                {
+                  "col": -1,
+                  "colspan": 2,
+                  "enabled": false,
+                  "id": "control_buttons",
+                  "row": -1,
+                  "rowspan": 1
+                },
+                {
+                  "col": 0,
+                  "colspan": 1,
+                  "config": {
+                    "color": 16750592,
+                    "icon": "filament",
+                    "macro": "T0"
+                  },
+                  "enabled": true,
+                  "id": "favorite_macro:11",
+                  "row": 2,
+                  "rowspan": 1
+                },
+                {
+                  "col": 4,
+                  "colspan": 1,
+                  "config": {
+                    "color": 8421504,
+                    "icon": "arrow_down",
+                    "macro": "NO_TOOL"
+                  },
+                  "enabled": true,
+                  "id": "favorite_macro:12",
+                  "row": 3,
+                  "rowspan": 1
+                },
+                {
+                  "col": 1,
+                  "colspan": 1,
+                  "config": {
+                    "color": 8069026,
+                    "icon": "filament",
+                    "macro": "T1"
+                  },
+                  "enabled": true,
+                  "id": "favorite_macro:13",
+                  "row": 2,
+                  "rowspan": 1
+                },
+                {
+                  "col": 2,
+                  "colspan": 1,
+                  "config": {
+                    "color": 4149685,
+                    "icon": "filament",
+                    "macro": "T2"
+                  },
+                  "enabled": true,
+                  "id": "favorite_macro:14",
+                  "row": 2,
+                  "rowspan": 1
+                },
+                {
+                  "col": 3,
+                  "colspan": 1,
+                  "config": {
+                    "color": 16777215,
+                    "icon": "filament",
+                    "macro": "T3"
+                  },
+                  "enabled": true,
+                  "id": "favorite_macro:15",
+                  "row": 2,
+                  "rowspan": 1
+                },
+                {
+                  "col": 4,
+                  "colspan": 1,
+                  "config": {
+                    "color": 15022389,
+                    "icon": "filament",
+                    "macro": "T4"
+                  },
+                  "enabled": true,
+                  "id": "favorite_macro:16",
+                  "row": 2,
                   "rowspan": 1
                 }
               ]
