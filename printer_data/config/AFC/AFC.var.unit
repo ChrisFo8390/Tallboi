@@ -185,7 +185,7 @@
             }
         },
         "bypass": {
-            "enabled": false
+            "enabled": 0
         }
     }
 }
