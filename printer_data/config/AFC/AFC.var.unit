@@ -11,8 +11,8 @@
             "map": "T0",
             "load": true,
             "prep": true,
-            "tool_loaded": false,
-            "loaded_to_hub": false,
+            "tool_loaded": true,
+            "loaded_to_hub": true,
             "material": null,
             "density": 1.24,
             "diameter": 1.75,
@@ -25,8 +25,8 @@
             "extruder_temp": 0,
             "bed_temp": 0,
             "runout_lane": null,
-            "filament_status": "Ready",
-            "filament_status_led": "#7f7f7f",
+            "filament_status": "In Tool",
+            "filament_status_led": "#0000ff",
             "status": "Loaded",
             "dist_hub": 1231.81,
             "td1_data": {},
@@ -43,8 +43,8 @@
             "map": "T1",
             "load": true,
             "prep": true,
-            "tool_loaded": false,
-            "loaded_to_hub": false,
+            "tool_loaded": true,
+            "loaded_to_hub": true,
             "material": null,
             "density": 1.24,
             "diameter": 1.75,
@@ -57,8 +57,8 @@
             "extruder_temp": 0,
             "bed_temp": 0,
             "runout_lane": null,
-            "filament_status": "Ready",
-            "filament_status_led": "#7f7f7f",
+            "filament_status": "In Tool",
+            "filament_status_led": "#0000ff",
             "status": "Loaded",
             "dist_hub": 1500.0,
             "td1_data": {},
@@ -169,10 +169,10 @@
         "num_extruders": 5,
         "extruders": {
             "extruder": {
-                "lane_loaded": null
+                "lane_loaded": "lane0"
             },
             "extruder1": {
-                "lane_loaded": null
+                "lane_loaded": "lane1"
             },
             "extruder2": {
                 "lane_loaded": null
