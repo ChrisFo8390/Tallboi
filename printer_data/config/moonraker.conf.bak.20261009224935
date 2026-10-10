@@ -189,10 +189,3 @@ requirements: requirements.txt
 system_dependencies: system-dependencies.json
 primary_branch: main
 managed_services: klipper
-
-[update_manager ktc-gcode-preprocessor]
-type: git_repo
-path: /home/pi/ktc-gcode-preprocessor
-origin: https://github.com/ChrisFo8390/ktc-gcode-preprocessor.git
-primary_branch: main
-managed_services: klipper moonraker
