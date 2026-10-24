@@ -43,52 +43,21 @@
   "print_start_history": {
     "entries": [
       {
-        "phases": {},
-        "temp_bucket": 150,
-        "timestamp": 1775481945,
-        "total": 59
-      },
-      {
-        "phases": {
-          "7": 31
-        },
-        "temp_bucket": 150,
-        "timestamp": 1775489820,
-        "total": 44
-      },
-      {
-        "phases": {
-          "7": 3
-        },
-        "temp_bucket": 150,
-        "timestamp": 1775497055,
-        "total": 44
-      },
-      {
-        "phases": {},
-        "temp_bucket": 225,
-        "timestamp": 1775757237,
-        "total": 295
-      },
-      {
-        "phases": {},
-        "temp_bucket": 225,
-        "timestamp": 1775767221,
-        "total": 297
-      },
-      {
-        "phases": {},
-        "temp_bucket": 225,
-        "timestamp": 1775767654,
-        "total": 299
-      },
-      {
         "phases": {
           "7": 50
         },
         "temp_bucket": 2,
         "timestamp": 1775914656,
         "total": 318
+      },
+      {
+        "phases": {
+          "8": 18
+        },
+        "temp_bucket": 2,
+        "timestamp": 1792263792,
+        "total": 200,
+        "window": 1
       }
     ]
   },
@@ -229,7 +198,7 @@
             "tmc2240 stepper_z2",
             "tmc2240 stepper_z3"
           ],
-          "timestamp": "2026-10-16T20:03:03Z"
+          "timestamp": "2026-10-17T16:30:52Z"
         },
         "optional": [
           "neopixel Chamber",
@@ -850,7 +819,10 @@
   "thermal": {
     "rates": {
       "extruder": {
-        "heat_rate": 0.2893044054508209
+        "heat_rate": 0.2599526345729828
+      },
+      "heater_bed": {
+        "heat_rate": 1.923790693283081
       }
     }
   },
