@@ -38,12 +38,12 @@
             "hub": "direct",
             "extruder": "extruder1",
             "buffer": "EMU_buf1",
-            "buffer_status": "Neutral",
+            "buffer_status": "Advancing",
             "lane": 1,
             "map": "T1",
             "load": true,
             "prep": true,
-            "tool_loaded": true,
+            "tool_loaded": false,
             "loaded_to_hub": true,
             "material": "PLA",
             "density": 1.24,
@@ -57,8 +57,8 @@
             "extruder_temp": 0,
             "bed_temp": 0,
             "runout_lane": null,
-            "filament_status": "In Tool",
-            "filament_status_led": "#0000ff",
+            "filament_status": "Ready",
+            "filament_status_led": "#7f7f7f",
             "status": "Loaded",
             "dist_hub": 1500.0,
             "td1_data": {},
@@ -163,7 +163,7 @@
     },
     "Tools": {},
     "system": {
-        "current_load": "lane1",
+        "current_load": null,
         "num_units": 2,
         "num_lanes": 5,
         "num_extruders": 5,
@@ -172,7 +172,7 @@
                 "lane_loaded": "lane0"
             },
             "extruder1": {
-                "lane_loaded": "lane1"
+                "lane_loaded": null
             },
             "extruder2": {
                 "lane_loaded": null
