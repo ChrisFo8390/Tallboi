@@ -38,7 +38,7 @@
   "language": "de",
   "log_path": "/tmp/helixscreen.log",
   "motion": {
-    "jog_mode": 1
+    "jog_mode": 2
   },
   "print_start_history": {
     "entries": [
@@ -198,7 +198,7 @@
             "tmc2240 stepper_z2",
             "tmc2240 stepper_z3"
           ],
-          "timestamp": "2026-10-31T20:20:30Z"
+          "timestamp": "2026-10-31T21:32:52Z"
         },
         "optional": [
           "neopixel Chamber",

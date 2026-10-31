@@ -1,0 +1,57 @@
+Dock autotune T0 - seat test - 2026-10-31 22:20:51
+Status: STOPPED: Move out of range: 3.100 -32.200 256.200 [0.000] (38 lifts)
+Settings: step 0.500 mm, range x+/-1.50 y+/-2.00, 3 repeat(s), speed factor 0.5, acceleration 2000, high-pass 50 ms, speed at the contact 2 mm/s, machine prepared by DOCK_AUTOTUNE with bed 70 C
+
+Park positions of T0
+  axis      before       after   result
+  x         3.100       3.100   measured, not changed by the seat test
+  y       -30.700     -30.700   measured, not changed by the seat test
+  z       266.200     266.200   height of the contact measured, not changed by the seat test
+
+No park position was changed.
+
+Lift into the shuttle: park Z 266.200, verify waypoint at Z 266.200
+  first lift at path speed: the strongest knock is at Z 264.519 (0.9 g), 1.681 mm below the verify waypoint
+  all knocks of the first lift: Z 264.519 (0.9 g), Z 264.885 (0.8 g)
+  the slow part of the later lifts starts at Z 263.019 (2 mm/s)
+  strongest knock of the later lifts: Z 259.189 (median), 258.734 .. 265.187 over the positions
+
+Suggested park positions (nothing is applied). The quiet window is the range of positions where the tool does not move:
+  x: quiet from -1.50 to +1.00 mm but no louder position on the minus side within the range: raise seat_range
+
+Seat test T0 X: the hub into the shuttle at positions along the axis (g after a 50 ms high-pass; z of the strongest knock in mm; energy = of the whole hub, g^2 s; wobble = sideways, slow, g^2 s; score = energy + wobble, the lower the calmer; release = knock while it goes down; medians of the repeats)
+ offset  pin  events   z_main   peak  energy  wobble   score  release
+  -1.50  3/3     2.0   258.813   1.36    0.075    0.033    0.107     1.36
+  -1.00  3/3     0.0   259.189   1.45    0.060    0.024    0.084     1.45
+  -0.50  3/3     0.0             1.27    0.068    0.032    0.101     1.27
+  +0.00  3/3     0.0             1.36    0.061    0.028    0.089     1.36
+  +0.50  3/3     1.0   258.947   1.11    0.059    0.029    0.089     1.11
+  +1.00  3/3     2.0   258.789   1.12    0.070    0.030    0.101     1.12
+  +1.50  0/3     4.0   265.187   4.36    0.303    0.110    0.413     0.96
+Nothing is changed by the seat test. Pin = lifts for which the tool detection was on at the top.
+
+Seat test T0 Y: the hub into the shuttle at positions along the axis (g after a 50 ms high-pass; z of the strongest knock in mm; energy = of the whole hub, g^2 s; wobble = sideways, slow, g^2 s; score = energy + wobble, the lower the calmer; release = knock while it goes down; medians of the repeats)
+ offset  pin  events   z_main   peak  energy  wobble   score  release
+  -1.00  0/3     6.0   258.734   1.46    0.150    0.038    0.189     1.46
+  -0.50  3/3     0.0             0.82    0.058    0.029    0.087     0.82
+  +0.00  3/3     0.0             1.36    0.061    0.028    0.089     1.36
+  +0.50  3/3     1.0   260.120   1.09    0.073    0.035    0.108     1.09
+  +1.00  3/3     6.0   262.409   5.99    0.332    0.134    0.466     1.62
+  +1.50  3/3     6.0   263.708   5.94    0.429    0.177    0.606     5.94
+Nothing is changed by the seat test. Pin = lifts for which the tool detection was on at the top.
+
+Data (CSV)
+tool,axis,offset_mm,value_mm,pin_ok,pin_total,events,z_main,peak_all_g,energy_g2s,wobble_g2s,score,z_first,z_last,peak_first_g,peak_last_g,lateral_share,ix_mm_s,iy_mm_s,release_g
+0,x,-1.5,1.6,3,3,2,258.813,1.362,0.0746,0.0325,0.1072,258.813,259.342,0.621,0.596,0.445,-11.58,-1.01,1.362
+0,x,-1.0,2.1,3,3,0,259.189,1.448,0.0597,0.0241,0.0838,259.189,259.422,0.854,0.533,0.353,9.75,4.27,1.448
+0,x,-0.5,2.6,3,3,0,,1.274,0.0684,0.0323,0.1006,,,,,,,,1.274
+0,x,0.0,3.1,3,3,0,,1.362,0.0614,0.028,0.0893,,,,,,,,1.362
+0,x,0.5,3.6,3,3,1,258.947,1.106,0.0591,0.0295,0.0886,258.947,258.947,0.525,0.525,0.625,5.92,-3.66,1.106
+0,x,1.0,4.1,3,3,2,258.789,1.12,0.0703,0.0302,0.1005,258.789,259.291,0.729,0.623,0.237,8.52,-4.5,1.12
+0,x,1.5,4.6,0,3,4,265.187,4.361,0.3027,0.11,0.4127,258.771,265.187,0.524,4.361,0.318,-18.04,-0.51,0.958
+0,y,-1.0,-31.7,0,3,6,258.734,1.462,0.1503,0.0382,0.1885,258.734,260.947,1.006,0.774,0.116,3.22,1.01,1.462
+0,y,-0.5,-31.2,3,3,0,,0.822,0.0582,0.0292,0.0874,,,,,,,,0.822
+0,y,0.0,-30.7,3,3,0,,1.362,0.0614,0.028,0.0893,,,,,,,,1.362
+0,y,0.5,-30.2,3,3,1,260.12,1.088,0.0733,0.0346,0.1079,260.114,260.12,0.67,0.749,0.617,-11.01,-0.45,1.088
+0,y,1.0,-29.7,3,3,6,262.409,5.985,0.3321,0.1338,0.4659,258.669,262.409,0.622,5.985,0.44,1.84,-4.72,1.618
+0,y,1.5,-29.2,3,3,6,263.708,5.942,0.4289,0.1774,0.6063,258.618,264.191,0.629,3.758,0.374,-8.88,14.58,5.942
