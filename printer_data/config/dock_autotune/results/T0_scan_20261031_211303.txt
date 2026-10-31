@@ -1,0 +1,93 @@
+Dock autotune T0 - scan - 2026-10-31 21:13:03
+Status: finished (70 pickups)
+Settings: step 0.100 mm, range x+/-0.60 y+/-0.50 z+/-0.50, 2 repeat(s), speed factor 0.5, acceleration 2000, machine prepared by DOCK_AUTOTUNE with bed 70 C
+
+Park positions of T0
+  axis      before       after   result
+  x         2.600       2.600   unchanged, window not closed (at least 1.20 mm wide: -0.60 mm (open, no failure up to here) .. +0.60 mm (open, no failure up to here))
+  y       -30.100     -30.100   unchanged, window not closed (at least 1.00 mm wide: -0.50 mm (open, no failure up to here) .. +0.50 mm (open, no failure up to here))
+  z       266.200     266.200   unchanged, window not closed (at least 1.00 mm wide: -0.50 mm (open, no failure up to here) .. +0.50 mm (open, no failure up to here))
+
+No park position was changed.
+
+Scan trials X in the order they were made (offset from the start value 2.600)
+ offset      value  result  peak_g
+ +0.000      2.600  locked       -
+ +0.100      2.700  locked       -
+ +0.200      2.800  locked       -
+ +0.300      2.900  locked       -
+ +0.400      3.000  locked       -
+ +0.500      3.100  locked       -
+ +0.600      3.200  locked       -
+ -0.100      2.500  locked       -
+ -0.200      2.400  locked       -
+ -0.300      2.300  locked       -
+ -0.400      2.200  locked       -
+ -0.500      2.100  locked       -
+ -0.600      2.000  locked       -
+
+Scan trials Y in the order they were made (offset from the start value -30.100)
+ offset      value  result  peak_g
+ +0.000    -30.100  locked       -
+ +0.100    -30.000  locked       -
+ +0.200    -29.900  locked       -
+ +0.300    -29.800  locked       -
+ +0.400    -29.700  locked       -
+ +0.500    -29.600  locked       -
+ -0.100    -30.200  locked       -
+ -0.200    -30.300  locked       -
+ -0.300    -30.400  locked       -
+ -0.400    -30.500  locked       -
+ -0.500    -30.600  locked       -
+
+Scan trials Z in the order they were made (offset from the start value 266.200)
+ offset      value  result  peak_g
+ +0.000    266.200  locked       -
+ +0.100    266.300  locked       -
+ +0.200    266.400  locked       -
+ +0.300    266.500  locked       -
+ +0.400    266.600  locked       -
+ +0.500    266.700  locked       -
+ -0.100    266.100  locked       -
+ -0.200    266.000  locked       -
+ -0.300    265.900  locked       -
+ -0.400    265.800  locked       -
+ -0.500    265.700  locked       -
+
+Data (CSV)
+tool,axis,offset_mm,value_mm,locked,peak_g
+0,x,0.0,2.6,1,
+0,x,0.1,2.7,1,
+0,x,0.2,2.8,1,
+0,x,0.3,2.9,1,
+0,x,0.4,3.0,1,
+0,x,0.5,3.1,1,
+0,x,0.6,3.2,1,
+0,x,-0.1,2.5,1,
+0,x,-0.2,2.4,1,
+0,x,-0.3,2.3,1,
+0,x,-0.4,2.2,1,
+0,x,-0.5,2.1,1,
+0,x,-0.6,2.0,1,
+0,y,0.0,-30.1,1,
+0,y,0.1,-30.0,1,
+0,y,0.2,-29.9,1,
+0,y,0.3,-29.8,1,
+0,y,0.4,-29.7,1,
+0,y,0.5,-29.6,1,
+0,y,-0.1,-30.2,1,
+0,y,-0.2,-30.3,1,
+0,y,-0.3,-30.4,1,
+0,y,-0.4,-30.5,1,
+0,y,-0.5,-30.6,1,
+0,z,0.0,266.2,1,
+0,z,0.1,266.3,1,
+0,z,0.2,266.4,1,
+0,z,0.3,266.5,1,
+0,z,0.4,266.6,1,
+0,z,0.5,266.7,1,
+0,z,-0.1,266.1,1,
+0,z,-0.2,266.0,1,
+0,z,-0.3,265.9,1,
+0,z,-0.4,265.8,1,
+0,z,-0.5,265.7,1,
