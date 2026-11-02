@@ -198,7 +198,7 @@
             "tmc2240 stepper_z2",
             "tmc2240 stepper_z3"
           ],
-          "timestamp": "2026-11-01T15:49:00Z"
+          "timestamp": "2026-11-01T19:22:49Z"
         },
         "optional": [
           "neopixel Chamber",

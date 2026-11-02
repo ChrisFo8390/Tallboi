@@ -1,0 +1,399 @@
+Dock autotune T0, T1, T2, T3, T4 - seat test - 2026-11-01 18:08:58
+Tools:
+  T0  finished
+  T1  finished
+  T2  finished
+  T3  finished
+  T4  finished
+
+Park positions
+  tool  axis     current         new   result
+  T0   x         3.000       3.000   quiet over the whole range, no change
+  T0   y       -30.700     -30.700   quiet over the whole range, no change
+  T0   z       266.200           -   no suggestion for Z; the contact height is given below
+  T1   x        76.000      76.000   in the centre, no change
+  T1   y       -29.900     -30.087   move by -0.19 mm (window open on the minus side)
+  T1   z       266.200           -   no suggestion for Z; the contact height is given below
+  T2   x       150.800     150.488   move by -0.31 mm (window open on the minus side)
+  T2   y       -29.700     -30.012   move by -0.31 mm (window open on the minus side)
+  T2   z       266.200           -   no suggestion for Z; the contact height is given below
+  T3   x       224.800     224.800   quiet over the whole range, no change
+  T3   y       -29.200     -29.200   in the centre, no change (window open on the minus side)
+  T3   z       266.200           -   no suggestion for Z; the contact height is given below
+  T4   x       299.200     299.200   quiet over the whole range, no change
+  T4   y       -29.200     -29.200   quiet over the whole range, no change
+  T4   z       266.200           -   no suggestion for Z; the contact height is given below
+
+Suggested new park positions (copy them into the tool files toolchanger/tools/T0.cfg, T1.cfg, ...):
+  T1:
+    params_park_y: -30.087
+  T2:
+    params_park_x: 150.488
+    params_park_y: -30.012
+To try them first, without editing the tool files, and to measure again around the new positions:
+  SET_TOOL_PARAMETER T=1 PARAMETER=params_park_y VALUE=-30.087
+  SET_TOOL_PARAMETER T=2 PARAMETER=params_park_x VALUE=150.488
+  SET_TOOL_PARAMETER T=2 PARAMETER=params_park_y VALUE=-30.012
+Already in the centre of the quiet window: T0 x, T0 y, T1 x, T3 x, T3 y, T4 x, T4 y.
+
+==============================================================================
+
+Dock autotune T0 - seat test - 2026-11-01 17:53:38
+Status: finished (28 lifts)
+Settings: step 0.250 mm, range x+/-0.50 y+/-0.50, 3 repeat(s), speed factor 0.5, acceleration 2000, high-pass 50 ms, speed at the contact 2 mm/s, machine prepared by DOCK_AUTOTUNE with bed 70 C
+
+Park positions of T0
+  axis     current         new   result
+  x         3.000       3.000   quiet over the whole range, no change
+  y       -30.700     -30.700   quiet over the whole range, no change
+  z       266.200           -   no suggestion for Z; the contact height is given below
+
+No change needed for x and y.
+
+T0 X axis  (bar = how much the tool moved, compared with the calmest position, which scored 0.103)
+   offset   position   movement
+   -0.50      2.500   ###                            quiet
+   -0.25      2.750   ###                            quiet
+   +0.00      3.000   ###                            quiet   <- current
+   +0.25      3.250   ###                            quiet
+   +0.50      3.500   ###                            quiet
+  => X: Quiet at every position from 2.50 to 3.50: the edges are farther away than the measured range. The current position is safe, no change needed.
+
+T0 Y axis  (bar = how much the tool moved, compared with the calmest position, which scored 0.089)
+   offset   position   movement
+   -0.50    -31.200   ###                            quiet
+   -0.25    -30.950   ####                           quiet
+   +0.00    -30.700   ####                           quiet   <- current
+   +0.25    -30.450   ####                           quiet
+   +0.50    -30.200   ####                           quiet
+  => Y: Quiet at every position from -31.20 to -30.20: the edges are farther away than the measured range. The current position is safe, no change needed.
+
+Details (for a closer look; the CSV block below has all numbers)
+
+Lift into the shuttle: park Z 266.200, verify waypoint at Z 266.200
+  first lift at path speed: the strongest knock is at Z 264.511 (1.0 g), 1.689 mm below the verify waypoint
+  all knocks of the first lift: Z 256.507 (0.7 g), Z 264.511 (1.0 g), Z 265.023 (0.7 g)
+  the slow part of the later lifts starts at Z 256.200 (2 mm/s)
+
+Seat test T0 X: the hub into the shuttle at positions along the axis (g after a 50 ms high-pass; z of the strongest knock in mm; energy = of the whole hub, g^2 s; wobble = sideways, slow, g^2 s; score = energy + wobble, the lower the calmer; release = knock while it goes down; medians of the repeats)
+ offset  pin  events   z_main   peak  energy  wobble   score  release
+  -0.50  3/3     0.0             1.20    0.083    0.036    0.119     1.20
+  -0.25  3/3     0.0             1.24    0.080    0.036    0.116     1.24
+  +0.00  3/3     0.0             1.37    0.081    0.035    0.116     1.37
+  +0.25  3/3     0.0             1.11    0.073    0.033    0.106     1.11
+  +0.50  3/3     0.0             1.01    0.069    0.033    0.103     1.01
+Pin = lifts for which the tool detection was on at the top.
+
+Seat test T0 Y: the hub into the shuttle at positions along the axis (g after a 50 ms high-pass; z of the strongest knock in mm; energy = of the whole hub, g^2 s; wobble = sideways, slow, g^2 s; score = energy + wobble, the lower the calmer; release = knock while it goes down; medians of the repeats)
+ offset  pin  events   z_main   peak  energy  wobble   score  release
+  -0.50  3/3     0.0             0.77    0.060    0.029    0.089     0.77
+  -0.25  3/3     0.0             0.96    0.074    0.034    0.108     0.96
+  +0.00  3/3     0.0             1.37    0.081    0.035    0.116     1.37
+  +0.25  3/3     0.0             1.25    0.078    0.035    0.113     1.25
+  +0.50  3/3     0.0             1.21    0.071    0.034    0.105     1.21
+Pin = lifts for which the tool detection was on at the top.
+
+Data (CSV)
+tool,axis,offset_mm,value_mm,pin_ok,pin_total,events,z_main,peak_all_g,energy_g2s,wobble_g2s,score,z_first,z_last,peak_first_g,peak_last_g,lateral_share,ix_mm_s,iy_mm_s,release_g
+0,x,-0.5,2.5,3,3,0,,1.199,0.0834,0.0362,0.1195,,,,,,,,1.199
+0,x,-0.25,2.75,3,3,0,,1.239,0.0801,0.0361,0.1162,,,,,,,,1.239
+0,x,0.0,3.0,3,3,0,,1.371,0.0808,0.035,0.1157,,,,,,,,1.371
+0,x,0.25,3.25,3,3,0,,1.108,0.0728,0.033,0.1058,,,,,,,,1.108
+0,x,0.5,3.5,3,3,0,,1.008,0.0692,0.0334,0.1026,,,,,,,,1.008
+0,y,-0.5,-31.2,3,3,0,,0.774,0.0601,0.0295,0.0895,,,,,,,,0.774
+0,y,-0.25,-30.95,3,3,0,,0.965,0.0739,0.0344,0.1083,,,,,,,,0.965
+0,y,0.0,-30.7,3,3,0,,1.371,0.0808,0.035,0.1157,,,,,,,,1.371
+0,y,0.25,-30.45,3,3,0,,1.254,0.0776,0.0354,0.113,,,,,,,,1.254
+0,y,0.5,-30.2,3,3,0,,1.21,0.0708,0.0343,0.1051,,,,,,,,1.21
+
+==============================================================================
+
+Dock autotune T1 - seat test - 2026-11-01 17:57:54
+Status: finished (28 lifts)
+Settings: step 0.250 mm, range x+/-0.50 y+/-0.50, 3 repeat(s), speed factor 0.5, acceleration 2000, high-pass 50 ms, speed at the contact 2 mm/s, machine prepared by DOCK_AUTOTUNE with bed 70 C
+
+Park positions of T1
+  axis     current         new   result
+  x        76.000      76.000   in the centre, no change
+  y       -29.900     -30.087   move by -0.19 mm (window open on the minus side)
+  z       266.200           -   no suggestion for Z; the contact height is given below
+
+Suggested new park positions (copy them into toolchanger/tools/T1.cfg):
+  params_park_y: -30.087
+To try them first, without editing the tool file, and to measure again around the new position:
+  SET_TOOL_PARAMETER T=1 PARAMETER=params_park_y VALUE=-30.087
+
+T1 X axis  (bar = how much the tool moved, compared with the calmest position, which scored 0.143)
+   offset   position   movement
+   -0.50     75.500   ####                           FAIL: the tool was not caught
+   -0.25     75.750   ###                            quiet
+   +0.00     76.000   ###                            quiet   <- current
+   +0.25     76.250   ###                            quiet
+   +0.50     76.500   ######                         rough
+  => X: Quiet from 75.62 to 76.38 (0.75 mm wide), centre 76.00. The current position is in the centre (0.00 mm off), no change needed.
+
+T1 Y axis  (bar = how much the tool moved, compared with the calmest position, which scored 0.108)
+   offset   position   movement
+   -0.50    -30.400   ###                            quiet
+   -0.25    -30.150   ####                           quiet
+   +0.00    -29.900   ####                           quiet   <- current
+   +0.25    -29.650   #####                          rough
+   +0.50    -29.400   ######                         rough
+  => Y: Quiet from -30.40 to -29.77, but the minus edge was not reached (at least 0.62 mm wide). Centre of the measured part -30.09, the real centre is further towards minus. Move by -0.19 mm to -30.087.
+
+Details (for a closer look; the CSV block below has all numbers)
+
+Lift into the shuttle: park Z 266.200, verify waypoint at Z 266.200
+  first lift at path speed: the strongest knock is at Z 259.042 (1.1 g), 7.158 mm below the verify waypoint
+  all knocks of the first lift: Z 256.593 (0.5 g), Z 259.042 (1.1 g), Z 265.283 (0.6 g), Z 265.981 (0.6 g)
+  the slow part of the later lifts starts at Z 256.200 (2 mm/s)
+  strongest knock of the later lifts: Z 260.536 (median), 259.355 .. 262.343 over the positions
+
+Seat test T1 X: the hub into the shuttle at positions along the axis (g after a 50 ms high-pass; z of the strongest knock in mm; energy = of the whole hub, g^2 s; wobble = sideways, slow, g^2 s; score = energy + wobble, the lower the calmer; release = knock while it goes down; medians of the repeats)
+ offset  pin  events   z_main   peak  energy  wobble   score  release
+  -0.50  0/3     0.0             1.67    0.135    0.041    0.176     1.67
+  -0.25  3/3     1.0   260.342   2.18    0.111    0.040    0.150     2.18
+  +0.00  3/3     0.0             1.52    0.107    0.035    0.143     1.52
+  +0.25  3/3     1.0   260.114   1.54    0.109    0.035    0.144     1.54
+  +0.50  3/3     1.0   260.730   4.39    0.175    0.088    0.263     1.59
+Pin = lifts for which the tool detection was on at the top.
+
+Seat test T1 Y: the hub into the shuttle at positions along the axis (g after a 50 ms high-pass; z of the strongest knock in mm; energy = of the whole hub, g^2 s; wobble = sideways, slow, g^2 s; score = energy + wobble, the lower the calmer; release = knock while it goes down; medians of the repeats)
+ offset  pin  events   z_main   peak  energy  wobble   score  release
+  -0.50  3/3     0.0   259.355   1.52    0.083    0.025    0.108     1.52
+  -0.25  3/3     0.0             1.53    0.099    0.031    0.130     1.53
+  +0.00  3/3     0.0             1.52    0.107    0.035    0.143     1.52
+  +0.25  3/3     1.0   261.373   1.99    0.130    0.047    0.176     1.65
+  +0.50  3/3     1.0   262.343   2.69    0.142    0.066    0.208     2.69
+Pin = lifts for which the tool detection was on at the top.
+
+Data (CSV)
+tool,axis,offset_mm,value_mm,pin_ok,pin_total,events,z_main,peak_all_g,energy_g2s,wobble_g2s,score,z_first,z_last,peak_first_g,peak_last_g,lateral_share,ix_mm_s,iy_mm_s,release_g
+1,x,-0.5,75.5,0,3,0,,1.671,0.1351,0.0407,0.1758,,,,,,,,1.671
+1,x,-0.25,75.75,3,3,1,260.342,2.182,0.1108,0.04,0.1502,260.342,260.342,1.13,1.13,0.362,1.52,4.23,2.182
+1,x,0.0,76.0,3,3,0,,1.521,0.1071,0.0351,0.1426,,,,,,,,1.521
+1,x,0.25,76.25,3,3,1,260.114,1.537,0.1092,0.0347,0.144,260.114,260.114,0.575,0.575,0.706,4.58,6.45,1.537
+1,x,0.5,76.5,3,3,1,260.73,4.395,0.1754,0.0878,0.2632,260.73,260.73,4.395,4.395,0.745,5.82,2.75,1.586
+1,y,-0.5,-30.4,3,3,0,259.355,1.52,0.083,0.0249,0.1078,259.355,259.355,0.665,0.665,0.481,-10.54,-6.98,1.52
+1,y,-0.25,-30.15,3,3,0,,1.534,0.0988,0.0313,0.1301,,,,,,,,1.534
+1,y,0.0,-29.9,3,3,0,,1.521,0.1071,0.0351,0.1426,,,,,,,,1.521
+1,y,0.25,-29.65,3,3,1,261.373,1.99,0.1296,0.0468,0.1764,261.301,261.373,1.639,1.99,0.542,5.54,6.5,1.647
+1,y,0.5,-29.4,3,3,1,262.343,2.693,0.1418,0.0663,0.2083,262.343,262.343,1.888,1.888,0.544,10.41,2.63,2.693
+
+==============================================================================
+
+Dock autotune T2 - seat test - 2026-11-01 18:01:54
+Status: finished (28 lifts)
+Settings: step 0.250 mm, range x+/-0.50 y+/-0.50, 3 repeat(s), speed factor 0.5, acceleration 2000, high-pass 50 ms, speed at the contact 2 mm/s, machine prepared by DOCK_AUTOTUNE with bed 70 C
+
+Park positions of T2
+  axis     current         new   result
+  x       150.800     150.488   move by -0.31 mm (window open on the minus side)
+  y       -29.700     -30.012   move by -0.31 mm (window open on the minus side)
+  z       266.200           -   no suggestion for Z; the contact height is given below
+
+Suggested new park positions (copy them into toolchanger/tools/T2.cfg):
+  params_park_x: 150.488
+  params_park_y: -30.012
+To try them first, without editing the tool file, and to measure again around the new position:
+  SET_TOOL_PARAMETER T=2 PARAMETER=params_park_x VALUE=150.488
+  SET_TOOL_PARAMETER T=2 PARAMETER=params_park_y VALUE=-30.012
+
+T2 X axis  (bar = how much the tool moved, compared with the calmest position, which scored 0.086)
+   offset   position   movement
+   -0.50    150.300   ###                            quiet
+   -0.25    150.550   ###                            quiet
+   +0.00    150.800   #######                        rough   <- current
+   +0.25    151.050   ####                           quiet
+   +0.50    151.300   ###                            quiet
+  => X: Quiet from 150.30 to 150.68, but the minus edge was not reached (at least 0.38 mm wide). Centre of the measured part 150.49, the real centre is further towards minus. Move by -0.31 mm to 150.488.
+
+T2 Y axis  (bar = how much the tool moved, compared with the calmest position, which scored 0.077)
+   offset   position   movement
+   -0.50    -30.200   ###                            quiet
+   -0.25    -29.950   ###                            quiet
+   +0.00    -29.700   ########                       rough   <- current
+   +0.25    -29.450   #########################      LOUD
+   +0.50    -29.200   #######################        LOUD
+  => Y: Quiet from -30.20 to -29.82, but the minus edge was not reached (at least 0.38 mm wide). Centre of the measured part -30.01, the real centre is further towards minus. Move by -0.31 mm to -30.012.
+
+Details (for a closer look; the CSV block below has all numbers)
+
+Lift into the shuttle: park Z 266.200, verify waypoint at Z 266.200
+  first lift at path speed: the strongest knock is at Z 260.128 (3.1 g), 6.072 mm below the verify waypoint
+  all knocks of the first lift: Z 259.168 (1.1 g), Z 260.128 (3.1 g), Z 264.645 (1.2 g)
+  the slow part of the later lifts starts at Z 257.668 (2 mm/s)
+  strongest knock of the later lifts: Z 260.609 (median), 260.353 .. 262.172 over the positions
+
+Seat test T2 X: the hub into the shuttle at positions along the axis (g after a 50 ms high-pass; z of the strongest knock in mm; energy = of the whole hub, g^2 s; wobble = sideways, slow, g^2 s; score = energy + wobble, the lower the calmer; release = knock while it goes down; medians of the repeats)
+ offset  pin  events   z_main   peak  energy  wobble   score  release
+  -0.50  3/3     0.0   260.692   1.37    0.064    0.021    0.086     1.37
+  -0.25  3/3     0.0             1.50    0.071    0.025    0.095     1.50
+  +0.00  3/3     1.0   260.526   5.20    0.164    0.048    0.212     1.50
+  +0.25  3/3     1.0   260.353   1.49    0.075    0.031    0.106     1.49
+  +0.50  3/3     0.0             1.53    0.069    0.025    0.094     1.53
+Pin = lifts for which the tool detection was on at the top.
+
+Seat test T2 Y: the hub into the shuttle at positions along the axis (g after a 50 ms high-pass; z of the strongest knock in mm; energy = of the whole hub, g^2 s; wobble = sideways, slow, g^2 s; score = energy + wobble, the lower the calmer; release = knock while it goes down; medians of the repeats)
+ offset  pin  events   z_main   peak  energy  wobble   score  release
+  -0.50  3/3     0.0             1.40    0.057    0.023    0.080     1.40
+  -0.25  3/3     0.0             1.29    0.057    0.020    0.077     1.29
+  +0.00  3/3     1.0   260.526   5.20    0.164    0.048    0.212     1.50
+  +0.25  3/3     1.0   261.534   9.10    0.432    0.220    0.653     1.50
+  +0.50  3/3     1.0   262.172   8.02    0.420    0.177    0.599     4.11
+Pin = lifts for which the tool detection was on at the top.
+
+Data (CSV)
+tool,axis,offset_mm,value_mm,pin_ok,pin_total,events,z_main,peak_all_g,energy_g2s,wobble_g2s,score,z_first,z_last,peak_first_g,peak_last_g,lateral_share,ix_mm_s,iy_mm_s,release_g
+2,x,-0.5,150.3,3,3,0,260.692,1.367,0.0643,0.0215,0.0858,260.692,260.692,0.618,0.618,0.627,-15.13,-8.25,1.367
+2,x,-0.25,150.55,3,3,0,,1.5,0.0706,0.0248,0.0954,,,,,,,,1.5
+2,x,0.0,150.8,3,3,1,260.526,5.2,0.1642,0.0479,0.2121,260.526,260.526,5.2,5.2,0.239,0.43,-2.1,1.501
+2,x,0.25,151.05,3,3,1,260.353,1.489,0.0748,0.0311,0.1059,260.353,260.353,0.604,0.604,0.855,5.92,5.09,1.489
+2,x,0.5,151.3,3,3,0,,1.529,0.0691,0.0246,0.0936,,,,,,,,1.529
+2,y,-0.5,-30.2,3,3,0,,1.397,0.0573,0.0227,0.0798,,,,,,,,1.397
+2,y,-0.25,-29.95,3,3,0,,1.29,0.0574,0.0198,0.0773,,,,,,,,1.29
+2,y,0.0,-29.7,3,3,1,260.526,5.2,0.1642,0.0479,0.2121,260.526,260.526,5.2,5.2,0.239,0.43,-2.1,1.501
+2,y,0.25,-29.45,3,3,1,261.534,9.102,0.4325,0.2203,0.6528,261.534,261.534,9.102,9.102,0.567,-35.09,8.57,1.503
+2,y,0.5,-29.2,3,3,1,262.172,8.018,0.4202,0.1773,0.5992,262.172,262.172,8.018,7.952,0.472,-7.08,14.64,4.11
+
+==============================================================================
+
+Dock autotune T3 - seat test - 2026-11-01 18:05:55
+Status: finished (28 lifts)
+Settings: step 0.250 mm, range x+/-0.50 y+/-0.50, 3 repeat(s), speed factor 0.5, acceleration 2000, high-pass 50 ms, speed at the contact 2 mm/s, machine prepared by DOCK_AUTOTUNE with bed 70 C
+
+Park positions of T3
+  axis     current         new   result
+  x       224.800     224.800   quiet over the whole range, no change
+  y       -29.200     -29.200   in the centre, no change (window open on the minus side)
+  z       266.200           -   no suggestion for Z; the contact height is given below
+
+No change needed for x and y.
+
+T3 X axis  (bar = how much the tool moved, compared with the calmest position, which scored 0.106)
+   offset   position   movement
+   -0.50    224.300   ###                            quiet
+   -0.25    224.550   ###                            quiet
+   +0.00    224.800   ###                            quiet   <- current
+   +0.25    225.050   ####                           quiet
+   +0.50    225.300   ###                            quiet
+  => X: Quiet at every position from 224.30 to 225.30: the edges are farther away than the measured range. The current position is safe, no change needed.
+
+T3 Y axis  (bar = how much the tool moved, compared with the calmest position, which scored 0.111)
+   offset   position   movement
+   -0.50    -29.700   ###                            quiet
+   -0.25    -29.450   ###                            quiet
+   +0.00    -29.200   ###                            quiet   <- current
+   +0.25    -28.950   ####                           quiet
+   +0.50    -28.700   ##################             LOUD
+  => Y: Quiet from -29.70 to -28.82, but the minus edge was not reached (at least 0.88 mm wide). Centre of the measured part -29.26, the real centre is further towards minus. The current position is in the centre (0.06 mm off), no change needed.
+
+Details (for a closer look; the CSV block below has all numbers)
+
+Lift into the shuttle: park Z 266.200, verify waypoint at Z 266.200
+  first lift at path speed: the strongest knock is at Z 264.923 (0.9 g), 1.277 mm below the verify waypoint
+  all knocks of the first lift: Z 259.088 (0.7 g), Z 259.983 (0.5 g), Z 264.923 (0.9 g)
+  the slow part of the later lifts starts at Z 257.588 (2 mm/s)
+  strongest knock of the later lifts: Z 264.197 (median), 261.486 .. 266.057 over the positions
+
+Seat test T3 X: the hub into the shuttle at positions along the axis (g after a 50 ms high-pass; z of the strongest knock in mm; energy = of the whole hub, g^2 s; wobble = sideways, slow, g^2 s; score = energy + wobble, the lower the calmer; release = knock while it goes down; medians of the repeats)
+ offset  pin  events   z_main   peak  energy  wobble   score  release
+  -0.50  3/3     0.0             1.17    0.080    0.026    0.106     1.17
+  -0.25  3/3     0.0             1.10    0.086    0.025    0.110     1.10
+  +0.00  3/3     0.0             1.13    0.089    0.027    0.116     1.13
+  +0.25  3/3     0.0   266.057   1.17    0.094    0.031    0.125     1.17
+  +0.50  3/3     0.0             1.19    0.091    0.030    0.121     1.19
+Pin = lifts for which the tool detection was on at the top.
+
+Seat test T3 Y: the hub into the shuttle at positions along the axis (g after a 50 ms high-pass; z of the strongest knock in mm; energy = of the whole hub, g^2 s; wobble = sideways, slow, g^2 s; score = energy + wobble, the lower the calmer; release = knock while it goes down; medians of the repeats)
+ offset  pin  events   z_main   peak  energy  wobble   score  release
+  -0.50  3/3     0.0             1.07    0.087    0.028    0.115     1.07
+  -0.25  3/3     0.0             1.03    0.085    0.027    0.111     1.03
+  +0.00  3/3     0.0             1.13    0.089    0.027    0.116     1.13
+  +0.25  3/3     1.0   261.486   1.44    0.108    0.036    0.144     1.21
+  +0.50  3/3     2.0   264.197   8.51    0.480    0.192    0.672     1.71
+Pin = lifts for which the tool detection was on at the top.
+
+Data (CSV)
+tool,axis,offset_mm,value_mm,pin_ok,pin_total,events,z_main,peak_all_g,energy_g2s,wobble_g2s,score,z_first,z_last,peak_first_g,peak_last_g,lateral_share,ix_mm_s,iy_mm_s,release_g
+3,x,-0.5,224.3,3,3,0,,1.173,0.0799,0.0258,0.1057,,,,,,,,1.173
+3,x,-0.25,224.55,3,3,0,,1.103,0.0855,0.0249,0.1104,,,,,,,,1.103
+3,x,0.0,224.8,3,3,0,,1.132,0.0891,0.027,0.1161,,,,,,,,1.132
+3,x,0.25,225.05,3,3,0,266.057,1.173,0.0938,0.0311,0.1252,266.057,266.057,0.685,0.685,0.646,1.1,-0.8,1.173
+3,x,0.5,225.3,3,3,0,,1.189,0.0907,0.0304,0.1213,,,,,,,,1.189
+3,y,-0.5,-29.7,3,3,0,,1.075,0.0867,0.0279,0.1146,,,,,,,,1.075
+3,y,-0.25,-29.45,3,3,0,,1.031,0.0846,0.0267,0.1114,,,,,,,,1.031
+3,y,0.0,-29.2,3,3,0,,1.132,0.0891,0.027,0.1161,,,,,,,,1.132
+3,y,0.25,-28.95,3,3,1,261.486,1.44,0.1076,0.036,0.1436,261.486,261.486,1.44,1.44,0.658,12.92,4.09,1.207
+3,y,0.5,-28.7,3,3,2,264.197,8.514,0.4805,0.1917,0.6722,261.983,264.197,2.342,8.514,0.465,-1.43,0.92,1.709
+
+==============================================================================
+
+Dock autotune T4 - seat test - 2026-11-01 18:08:52
+Status: finished (28 lifts)
+Settings: step 0.250 mm, range x+/-0.50 y+/-0.50, 3 repeat(s), speed factor 0.5, acceleration 2000, high-pass 50 ms, speed at the contact 2 mm/s, machine prepared by DOCK_AUTOTUNE with bed 70 C
+
+Park positions of T4
+  axis     current         new   result
+  x       299.200     299.200   quiet over the whole range, no change
+  y       -29.200     -29.200   quiet over the whole range, no change
+  z       266.200           -   no suggestion for Z; the contact height is given below
+
+No change needed for x and y.
+
+T4 X axis  (bar = how much the tool moved, compared with the calmest position, which scored 0.090)
+   offset   position   movement
+   -0.50    298.700   ###                            quiet
+   -0.25    298.950   ###                            quiet
+   +0.00    299.200   ###                            quiet   <- current
+   +0.25    299.450   ###                            quiet
+   +0.50    299.700   ###                            quiet
+  => X: Quiet at every position from 298.70 to 299.70: the edges are farther away than the measured range. The current position is safe, no change needed.
+
+T4 Y axis  (bar = how much the tool moved, compared with the calmest position, which scored 0.089)
+   offset   position   movement
+   -0.50    -29.700   ###                            quiet
+   -0.25    -29.450   ###                            quiet
+   +0.00    -29.200   ###                            quiet   <- current
+   +0.25    -28.950   ###                            quiet
+   +0.50    -28.700   #####                          quiet
+  => Y: Quiet at every position from -29.70 to -28.70: the edges are farther away than the measured range. The current position is safe, no change needed.
+
+Details (for a closer look; the CSV block below has all numbers)
+
+Lift into the shuttle: park Z 266.200, verify waypoint at Z 266.200
+  first lift at path speed: the strongest knock is at Z 264.762 (1.0 g), 1.438 mm below the verify waypoint
+  all knocks of the first lift: Z 264.762 (1.0 g)
+  the slow part of the later lifts starts at Z 263.262 (2 mm/s)
+  strongest knock of the later lifts: Z 259.389 (median), 259.149 .. 260.345 over the positions
+
+Seat test T4 X: the hub into the shuttle at positions along the axis (g after a 50 ms high-pass; z of the strongest knock in mm; energy = of the whole hub, g^2 s; wobble = sideways, slow, g^2 s; score = energy + wobble, the lower the calmer; release = knock while it goes down; medians of the repeats)
+ offset  pin  events   z_main   peak  energy  wobble   score  release
+  -0.50  3/3     0.0   259.407   1.23    0.074    0.025    0.100     1.23
+  -0.25  3/3     0.0   259.394   1.39    0.077    0.025    0.102     1.39
+  +0.00  3/3     0.0   259.385   1.30    0.068    0.022    0.090     1.30
+  +0.25  3/3     0.0             1.32    0.072    0.025    0.098     1.32
+  +0.50  3/3     1.0   259.326   1.36    0.071    0.022    0.093     1.36
+Pin = lifts for which the tool detection was on at the top.
+
+Seat test T4 Y: the hub into the shuttle at positions along the axis (g after a 50 ms high-pass; z of the strongest knock in mm; energy = of the whole hub, g^2 s; wobble = sideways, slow, g^2 s; score = energy + wobble, the lower the calmer; release = knock while it goes down; medians of the repeats)
+ offset  pin  events   z_main   peak  energy  wobble   score  release
+  -0.50  3/3     1.0   259.596   0.93    0.069    0.026    0.095     0.93
+  -0.25  3/3     0.0             1.19    0.069    0.024    0.093     1.19
+  +0.00  3/3     0.0   259.385   1.30    0.068    0.022    0.090     1.30
+  +0.25  3/3     2.0   259.149   1.29    0.069    0.020    0.089     1.29
+  +0.50  3/3     3.0   260.345   2.21    0.106    0.036    0.142     1.38
+Pin = lifts for which the tool detection was on at the top.
+
+Data (CSV)
+tool,axis,offset_mm,value_mm,pin_ok,pin_total,events,z_main,peak_all_g,energy_g2s,wobble_g2s,score,z_first,z_last,peak_first_g,peak_last_g,lateral_share,ix_mm_s,iy_mm_s,release_g
+4,x,-0.5,298.7,3,3,0,259.407,1.226,0.0743,0.0253,0.1,259.407,259.626,0.527,0.504,0.22,-2.41,-2.79,1.226
+4,x,-0.25,298.95,3,3,0,259.394,1.391,0.0767,0.0251,0.1018,259.394,259.394,0.52,0.52,0.403,-3.9,-1.42,1.391
+4,x,0.0,299.2,3,3,0,259.385,1.298,0.0683,0.022,0.0904,259.385,259.385,0.527,0.527,0.155,0.49,-2.98,1.298
+4,x,0.25,299.45,3,3,0,,1.319,0.0725,0.0255,0.098,,,,,,,,1.319
+4,x,0.5,299.7,3,3,1,259.326,1.359,0.0713,0.0222,0.0934,259.326,259.469,0.583,0.522,0.153,-1.48,-2.58,1.359
+4,y,-0.5,-29.7,3,3,1,259.596,0.932,0.0688,0.0256,0.0945,259.596,259.596,0.764,0.764,0.199,1.76,-3.17,0.932
+4,y,-0.25,-29.45,3,3,0,,1.187,0.069,0.0244,0.0933,,,,,,,,1.187
+4,y,0.0,-29.2,3,3,0,259.385,1.298,0.0683,0.022,0.0904,259.385,259.385,0.527,0.527,0.155,0.49,-2.98,1.298
+4,y,0.25,-28.95,3,3,2,259.149,1.288,0.0687,0.0203,0.089,259.149,259.348,0.628,0.521,0.169,3.26,-2.88,1.288
+4,y,0.5,-28.7,3,3,3,260.345,2.208,0.1061,0.0359,0.1419,258.993,260.345,0.659,2.208,0.395,-6.06,-6.66,1.381
