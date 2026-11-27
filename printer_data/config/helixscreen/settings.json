@@ -64,6 +64,17 @@
         "timestamp": 1792263792,
         "total": 200,
         "window": 1
+      },
+      {
+        "heating": 47,
+        "phases": {
+          "HOMING": 123,
+          "QGL": 60
+        },
+        "temp_bucket": 2,
+        "timestamp": 1795801476,
+        "total": 195,
+        "window": 1
       }
     ]
   },
@@ -73,7 +84,8 @@
         "toolhead_style": 2
       },
       "bed_occupancy": {
-        "last_occupied": "{\"filename\":\"PLA-Mini night dragon by Jopek Design-124.581g-3h45m.gcode\",\"job_id\":\"000031\",\"object_height\":48.0,\"start_time\":1792263591.9378672}"
+        "last_occupied": "{\"filename\":\"PLA-Ute_Rentenkasse_lid_Wood-1_amp0p40-54.5248g-1h14m.gcode\",\"job_id\":\"000032\",\"object_height\":13.0,\"start_time\":1795801280.9796317}",
+        "outlines": "{\"filename\":\"PLA-Ute_Rentenkasse_lid_Wood-1_amp0p40-54.5248g-1h14m.gcode\",\"objects\":[[[72.6,97.6],[227.4,97.6],[227.4,202.4],[72.6,202.4]]]}"
       },
       "default_macros": {
         "cooldown": "SET_HEATER_TEMPERATURE HEATER=extruder TARGET=0\nSET_HEATER_TEMPERATURE HEATER=heater_bed TARGET=0",
@@ -211,7 +223,7 @@
             "tmc2240 stepper_z2",
             "tmc2240 stepper_z3"
           ],
-          "timestamp": "2026-11-26T18:55:19Z"
+          "timestamp": "2026-11-27T18:03:48Z"
         },
         "optional": [
           "neopixel Chamber",
@@ -277,20 +289,20 @@
           "filter": {
             "interval_h": 200,
             "notified": false,
-            "used_h": 0.0
+            "used_h": 0.02333333333333329
           },
           "nozzle": {
             "interval_h": 500,
             "notified": false,
-            "used_h": 0.0
+            "used_h": 0.02333333333333329
           },
           "rails": {
             "interval_h": 300,
             "notified": false,
-            "used_h": 0.0
+            "used_h": 0.02333333333333329
           }
         },
-        "total_h": 0.0
+        "total_h": 0.02333333333333329
       },
       "moonraker_api_key": false,
       "moonraker_host": "127.0.0.1",
@@ -664,7 +676,7 @@
   "thermal": {
     "rates": {
       "extruder": {
-        "heat_rate": 0.2599526345729828
+        "heat_rate": 0.15137574076652527
       },
       "heater_bed": {
         "heat_rate": 1.923790693283081
